@@ -1,9 +1,8 @@
+import "./Button.css";
+
 function Button({ text, onClickHandler }) {
   return (
-    <button
-      onClick={onClickHandler}
-      style={{ backgroundColor: "blue", color: "white" }}
-    >
+    <button onClick={onClickHandler} className="btn">
       {text}
     </button>
   );
