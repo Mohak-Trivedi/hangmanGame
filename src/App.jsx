@@ -19,7 +19,6 @@ function App() {
       <TextInput
         label="Enter some text"
         placeholder="Enter some text here"
-        value=""
         onChangeHandler={(e) => console.log(e.target.value)}
       />
     </div>

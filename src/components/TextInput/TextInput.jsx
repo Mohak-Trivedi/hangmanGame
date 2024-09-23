@@ -2,7 +2,6 @@ function TextInput({
   type = "text",
   label,
   placeholder = "Enter your input here",
-  value,
   onChangeHandler,
 }) {
   return (
@@ -12,7 +11,6 @@ function TextInput({
         type={type}
         className="px-4 py-2 border border-gray-500 rounded-md w-full"
         placeholder={placeholder}
-        value={value}
         onChange={onChangeHandler}
       />
     </label>
