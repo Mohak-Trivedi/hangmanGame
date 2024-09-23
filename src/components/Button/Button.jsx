@@ -1,5 +1,5 @@
-function Button(props) {
-  return <button>{props.text}</button>;
+function Button({ text, onClickHandler }) {
+  return <button onClick={onClickHandler}>{text}</button>;
 }
 
 export default Button;
