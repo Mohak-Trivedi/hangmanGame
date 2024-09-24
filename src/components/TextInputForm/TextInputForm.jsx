@@ -2,12 +2,22 @@ import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
 
 function TextInputForm() {
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log("Form Submitted");
+  }
+
+  function handleTextInputChange(event) {
+    console.log(event.target.value);
+  }
+
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <div>
         <TextInput
           label="Enter a word or a phrase"
           placeholder="Enter a word or a phrase here ..."
+          onChangeHandler={handleTextInputChange}
         />
       </div>
 
