@@ -1,7 +1,8 @@
 import TextInputForm from "./TextInputForm";
+import { useState } from "react";
 
 function TextInputFormContainer() {
-  let inputType = "password";
+  const [inputType, setInputType] = useState("password");
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -16,9 +17,9 @@ function TextInputFormContainer() {
     console.log("Show/Hide button clicked.");
 
     if (inputType === "password") {
-      inputType = "text";
+      setInputType("text");
     } else {
-      inputType = "password";
+      setInputType("password");
     }
 
     console.log("Input type changed to", inputType);
