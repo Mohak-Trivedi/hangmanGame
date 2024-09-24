@@ -1,16 +1,7 @@
 import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
 
-function TextInputForm() {
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    console.log("Form Submitted");
-  }
-
-  function handleTextInputChange(event) {
-    console.log(event.target.value);
-  }
-
+function TextInputForm({ handleFormSubmit, handleTextInputChange }) {
   return (
     <form onSubmit={handleFormSubmit}>
       <div>
