@@ -12,7 +12,7 @@ function TextInputFormContainer() {
     event.preventDefault();
     console.log("Form Submitted", value);
     if (value) {
-      navigate(`/play?text=${value}`);
+      navigate(`/play/${value}`);
     }
   }
 

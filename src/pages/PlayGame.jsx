@@ -1,11 +1,10 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function PlayGame() {
-  const [searchParams] = useSearchParams();
-  console.log(searchParams.get("text"));
+  const { text } = useParams();
   return (
     <>
-      <h1>Play Game</h1>
+      <h1>Play Game {text}</h1>
       <Link to="/start" className="text-blue-400">
         Start Page
       </Link>
