@@ -2,13 +2,21 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import MaskedText from "../components/MaskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/LetterButtons";
+import HangMan from "../components/HangMan/HangMan";
 
 function PlayGame() {
   const { state } = useLocation();
 
   const [guessedLetters, setGuessedLetters] = useState([]);
+  const [step, setStep] = useState(0);
 
   function handleLetterClick(letter) {
+    if (state.wordSelected.toUpperCase().includes(letter)) {
+      console.log("Correct Guess");
+    } else {
+      console.log("Wrong Guess");
+      setStep(step + 1);
+    }
     setGuessedLetters([...guessedLetters, letter]);
   }
 
@@ -26,8 +34,12 @@ function PlayGame() {
         />
       </div>
 
+      <div>
+        <HangMan step={step} />
+      </div>
+
       <Link to="/start" className="text-blue-400">
-        Start Page
+        Start Page Link
       </Link>
     </>
   );
