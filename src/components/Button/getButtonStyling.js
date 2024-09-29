@@ -9,6 +9,8 @@ function getButtonStyling(styleType) {
     return "bg-green-500";
   } else if (styleType === "warning") {
     return "bg-yellow-500";
+  } else if (styleType === "secondary") {
+    return "bg-gray-500";
   }
 }
 
